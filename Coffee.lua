@@ -10692,7 +10692,7 @@ end --]=]0
 Starlight:Notification({
 	Title = "Nebula Softworks",
 	Content = "UI Created by Nebula Softworks And Nebula Softworks alone. No other developer or such entity. We are spreading this message as a skid who claims others work as their own, etheruit (a fake bitdancer - bitdancer._) on discord, is claiming Starlight as theirs. Help us protect our work by staying away from his lies. You can always find us at dsc.gg/nebulasoftworks.\nThank you ❤️",
-	Duration = 5,
+	Duration = 4,
 	Icon = 105789146907268,
 })
 
