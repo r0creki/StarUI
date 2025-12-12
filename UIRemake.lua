@@ -1,6 +1,6 @@
 --// SECTION : Core Variables
 
-local Release = "Prerelease Beta 5.01a"
+local Release "x Uzi HUB"
 local debugV = false
 
 local Starlight = {
@@ -10691,7 +10691,7 @@ end --]=]0
 --// SECTION : Protection of our work
 Starlight:Notification({
 	Title = "Nebula Softworks",
-	Content = "Starlight is made with love, care and effort by Nebula Softworks And Nebula Softworks alone. No other developer or such entity. We are spreading this message as a skid who claims others work as their own, etheruit (a fake bitdancer - bitdancer._) on discord, is claiming Starlight as theirs. Help us protect our work by staying away from his lies. You can always find us at dsc.gg/nebulasoftworks.\nThank you ❤️",
+	Content = "UI Created by Nebula Softworks And Nebula Softworks alone. No other developer or such entity. We are spreading this message as a skid who claims others work as their own, etheruit (a fake bitdancer - bitdancer._) on discord, is claiming Starlight as theirs. Help us protect our work by staying away from his lies. You can always find us at dsc.gg/nebulasoftworks.\nThank you ❤️",
 	Duration = 5,
 	Icon = 105789146907268,
 })
