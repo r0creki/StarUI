@@ -1,6 +1,6 @@
 --// SECTION : Core Variables
 
-local Release "x UZI VERT HUB"
+local Release = "Prerelease Beta 5.01a"
 local debugV = false
 
 local Starlight = {
@@ -2616,7 +2616,7 @@ function Starlight:CreateWindow(WindowSettings)
 
 				title.Text = WindowSettings.LoadingSettings and WindowSettings.LoadingSettings.Title
 					or "Starlight Interface Suite"
-				versionLabel.Text = title.Text == "Starlight Interface Suite" and Release or `Starlight UI {Release}`
+				versionLabel.Text = title.Text == "Starlight Interface Suite" and Release or `Nebula UI {Release}`
 				title.playerName.Text = Player.DisplayName
 				playerIcon.Image = Players:GetUserThumbnailAsync(
 					Player.UserId,
@@ -2903,9 +2903,9 @@ function Starlight:CreateWindow(WindowSettings)
 					close(function()
 						local Success, Response = pcall(Action.Callback)
 
-						--[[if not Success then
+						if not Success then
 							warn(`Starlight Interface Suite - Callback Error | Dialog {Modal.Values.Name}`)
-							print(Response)]]
+							print(Response)
 							if WindowSettings.NotifyOnCallbackError then
 								Starlight:Notification({
 									Title = Modal.Values.Name .. " Callback Error",
@@ -2948,9 +2948,9 @@ function Starlight:CreateWindow(WindowSettings)
 								Action.Callback(Action.CurrentValue)
 							end)
 
-							--[[ if not Success then
+							if not Success then
 								warn(`Starlight Interface Suite - Callback Error | Dialog {Modal.Values.Name}`)
-								print(Response) ]]
+								print(Response)
 								if WindowSettings.NotifyOnCallbackError then
 									Starlight:Notification({
 										Title = Modal.Values.Name .. " Callback Error",
@@ -5004,10 +5004,10 @@ function Starlight:CreateWindow(WindowSettings)
 							ElementInstance.Interact.MouseButton1Click:Connect(function()
 								local Success, Response = pcall(Element.Values.Callback)
 
-								--[[ if not Success then
+								if not Success then
 									ElementInstance["PART_Backdrop"].Header.Header.Text = "Callback Error"
 									warn(`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -5233,12 +5233,12 @@ function Starlight:CreateWindow(WindowSettings)
 										Element.Values.Callback(Element.Values.CurrentValue)
 									end)
 
-								--[[	if not Success then
+									if not Success then
 										ElementInstance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`
 										)
-										print(Response) ]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
@@ -5269,12 +5269,12 @@ function Starlight:CreateWindow(WindowSettings)
 										Element.Values.Callback(Element.Values.CurrentValue)
 									end)
 
-									--[[ if not Success then
+									if not Success then
 										ElementInstance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`
 										)
-										print(Response) ]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
@@ -5319,12 +5319,12 @@ function Starlight:CreateWindow(WindowSettings)
 										Element.Values.Callback(Element.Values.CurrentValue)
 									end)
 
-								--[[	if not Success then
+									if not Success then
 										ElementInstance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`
 										)
-										print(Response) ]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
@@ -5361,12 +5361,12 @@ function Starlight:CreateWindow(WindowSettings)
 										Element.Values.Callback(Element.Values.CurrentValue)
 									end)
 
-									--[[if not Success then
+									if not Success then
 										ElementInstance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`
 										)
-										print(Response)]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
@@ -5422,12 +5422,12 @@ function Starlight:CreateWindow(WindowSettings)
 								Element.Values.Callback(Element.Values.CurrentValue)
 							end)
 
-							--[[ if not Success then
+							if not Success then
 								for _, ElementInstance in pairs(Instances) do
 									ElementInstance.Header.Text = "Callback Error"
 								end
 								warn(`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`)
-								print(Response) ]]
+								print(Response)
 								if WindowSettings.NotifyOnCallbackError then
 									Starlight:Notification({
 										Title = Element.Values.Name .. " Callback Error",
@@ -5690,10 +5690,10 @@ function Starlight:CreateWindow(WindowSettings)
 									Element.Values.Callback(Value)
 								end)
 
-								--[[ if not Success then
+								if not Success then
 									Element.Instance.Header.Text = "Callback Error"
 									warn(`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -5807,12 +5807,12 @@ function Starlight:CreateWindow(WindowSettings)
 											Element.Values.Callback(NewValue)
 										end)
 
-										--[[ if not Success then
+										if not Success then
 											Element.Instance.Header.Text = "Callback Error"
 											warn(
 												`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`
 											)
-											print(Response) ]]
+											print(Response)
 											if WindowSettings.NotifyOnCallbackError then
 												Starlight:Notification({
 													Title = Element.Values.Name .. " Callback Error",
@@ -6110,10 +6110,10 @@ function Starlight:CreateWindow(WindowSettings)
 									Element.Values.Callback(Element.Values.CurrentValue)
 								end)
 
-								--[[ if not Success then
+								if not Success then
 									Element.Instance.Header.Text = "Callback Error"
 									warn(`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -6179,10 +6179,10 @@ function Starlight:CreateWindow(WindowSettings)
 									Element.Values.Callback(Element.Values.CurrentValue)
 								end)
 
-								--[[ if not Success then
+								if not Success then
 									Element.Instance.Header.Text = "Callback Error"
 									warn(`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index})`)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -6579,12 +6579,12 @@ function Starlight:CreateWindow(WindowSettings)
 													Starlight.WindowKeybind = tostring(NewKeyNoEnum)
 												end)
 
-												--[[ if not Success then
+												if not Success then
 													Parent.Instance.Header.Text = "Callback Error"
 													warn(
 														`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 													)
-													print(Response) ]]
+													print(Response)
 													if WindowSettings.NotifyOnCallbackError then
 														Starlight:Notification({
 															Title = Element.Values.Name .. " Callback Error",
@@ -6614,12 +6614,12 @@ function Starlight:CreateWindow(WindowSettings)
 													)
 												end)
 
-												--[[ if not Success then
+												if not Success then
 													Parent.Instance.Header.Text = "Callback Error"
 													warn(
 														`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 													)
-													print(Response) ]]
+													print(Response)
 													if WindowSettings.NotifyOnCallbackError then
 														Starlight:Notification({
 															Title = Element.Values.Name .. " Callback Error",
@@ -6661,12 +6661,12 @@ function Starlight:CreateWindow(WindowSettings)
 													)
 												end)
 
-												--[[ if not Success then
+												if not Success then
 													Parent.Instance.Header.Text = "Callback Error"
 													warn(
 														`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 													)
-													print(Response) ]]
+													print(Response)
 													if WindowSettings.NotifyOnCallbackError then
 														Starlight:Notification({
 															Title = Element.Values.Name .. " Callback Error",
@@ -6687,12 +6687,12 @@ function Starlight:CreateWindow(WindowSettings)
 													)
 												end)
 
-												--[[ if not Success then
+												if not Success then
 													Parent.Instance.Header.Text = "Callback Error"
 													warn(
 														`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 													)
-													print(Response)  ]]
+													print(Response)
 													if WindowSettings.NotifyOnCallbackError then
 														Starlight:Notification({
 															Title = Element.Values.Name .. " Callback Error",
@@ -6737,12 +6737,12 @@ function Starlight:CreateWindow(WindowSettings)
 												end
 											end)
 
-											--[[ if not success then
+											if not success then
 												Parent.Instance.Header.Text = "Callback Error"
 												warn(
 													`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 												)
-												print(response) ]]
+												print(response)
 												if WindowSettings.NotifyOnCallbackError then
 													Starlight:Notification({
 														Title = Element.Values.Name .. " Callback Error",
@@ -6803,12 +6803,12 @@ function Starlight:CreateWindow(WindowSettings)
 														end
 													end)
 
-													--[[ if not success2 then
+													if not success2 then
 														Parent.Instance.Header.Text = "Callback Error"
 														warn(
 															`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 														)
-														print(response2) ]]
+														print(response2)
 														if WindowSettings.NotifyOnCallbackError then
 															Starlight:Notification({
 																Title = Element.Values.Name .. " Callback Error",
@@ -6833,12 +6833,12 @@ function Starlight:CreateWindow(WindowSettings)
 								end
 							end)
 
-							--[[ if not Success then
+							if not Success then
 								Parent.Instance.Header.Text = "Callback Error"
 								warn(
 									`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 								)
-								print(Response) ]]
+								print(Response)
 								if WindowSettings.NotifyOnCallbackError then
 									Starlight:Notification({
 										Title = Element.Values.Name .. " Callback Error",
@@ -6897,12 +6897,12 @@ function Starlight:CreateWindow(WindowSettings)
 									end
 								end)
 
-								--[[ if not Success then
+								if not Success then
 									Parent.Instance.Header.Text = "Callback Error"
 									warn(
 										`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 									)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -7118,12 +7118,12 @@ function Starlight:CreateWindow(WindowSettings)
 									)
 								end)
 
-								--[[ if not Success then
+								if not Success then
 									Parent.Instance.Header.Text = "Callback Error"
 									warn(
 										`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 									)
-									print(Response) ]]
+									print(Response)
 									if WindowSettings.NotifyOnCallbackError then
 										Starlight:Notification({
 											Title = Element.Values.Name .. " Callback Error",
@@ -8161,12 +8161,12 @@ function Starlight:CreateWindow(WindowSettings)
 											Table.Unpack(NestedElement.Values.CurrentOption)
 									end)
 
-									--[[ if not Success then
+									if not Success then
 										Parent.Instance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 										)
-										print(Response) ]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
@@ -8193,12 +8193,12 @@ function Starlight:CreateWindow(WindowSettings)
 											Table.Unpack(NestedElement.Values.CurrentOption)
 									end)
 
-								--[[] if not Success then
+									if not Success then
 										Parent.Instance.Header.Text = "Callback Error"
 										warn(
 											`Starlight Interface Suite - Callback Error | {Element.Values.Name} ({Index} {NestedIndex})`
 										)
-										print(Response) ]]
+										print(Response)
 										if WindowSettings.NotifyOnCallbackError then
 											Starlight:Notification({
 												Title = Element.Values.Name .. " Callback Error",
